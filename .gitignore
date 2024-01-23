@@ -3,6 +3,7 @@
 *.d
 *.mod.*
 *.mod*
+*.so
 
 *.cmd
 Module.symvers

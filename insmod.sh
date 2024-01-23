@@ -5,10 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-make -C src/
-mv src/heartbeat_dev.ko ./
-
-MOD=${1:-./heartbeat_dev.ko}
+MOD=${1:-./build/heartbeat_dev.ko}
 
 insmod $MOD \
     hb_error_entry=0x$(grep ' error_entry' /proc/kallsyms | cut -d' ' -f1) \
