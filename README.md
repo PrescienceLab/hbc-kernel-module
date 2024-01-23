@@ -8,16 +8,3 @@ To build and insert module:
 $ make kmod
 $ sudo ./insmod.sh
 ```
-
-To build libhb.so (necessary for interfacing with the kernel module)
-
-```
-$ make libhb
-```
-
-For use in the provided Docker Container from the artifact repo:
-```
-$ make libhb
-$ docker cp build/ <CONTAINER_ID>:/home/asplos24ae/hbc-asplos24-artifact/heartbeatcompiler/heartbeat-linux/
-```
-
